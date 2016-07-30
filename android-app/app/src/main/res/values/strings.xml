@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">K9</string>
+    <string name="ble_uuid">41B75845-BA0A-46D7-AF52-CA5CB0787608</string>
+</resources>
