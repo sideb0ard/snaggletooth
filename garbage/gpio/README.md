@@ -7,3 +7,4 @@ Potentially using https://github.com/sarfata/pi-blaster to PWM RC controllers li
 
 ####Files
 helloblink.py blinks an LED to validate RPi.GPIO is installed and the pi is working correctly.
+hellopwm.py fades up LEDs to validate pi-blaster is installed and is a reference script for PWM.
