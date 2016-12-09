@@ -6,18 +6,26 @@ def steer(pwmVal):
     if pwmVal >= 0.1 and pwmVal <= 0.2:
         pwmDev.write('%d=%s\n'%(pin0, str(pwmVal)))
     else:
-        print("pwmVal was not a float between .1 and .2")
+        print("No thanks: pwmVal was not a float between .1 and .2")
     print("pwmVal = {}".format(pwmVal))
 
 def left():
-    pwmDev.write('%d=%s\n'%(pin0, str(0.2)))
+    steer(0.2)
 
 def right():
-    pwmDev.write('%d=%s\n'%(pin0, str(0.1)))
+    steer(0.1)
 
 def center():
-    pwmDev.write('%d=%s\n'%(pin0, str(0.15)))
+    steer(0.15)
 
 if __name__ == "__main__":
     import sys
-    steer(float(sys.argv[1]))
+
+    def cliSteer():
+        steer(sys.argv[2])
+
+    cliFunctions = {"left":left,"right":right,"center":center,"steer":cliSteer}
+    try:
+        cliFunctions[sys.argv[1]]()
+    except:
+        print("No thanks: Missing or invalid arguments.")
