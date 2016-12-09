@@ -2,8 +2,7 @@ Mobility
 ========
 
 ####Libraries
-We are using RPi.GPIO for basic IO
-We are using https://github.com/sarfata/pi-blaster to PWM servos like https://github.com/lawsonkeith/picar
+We are using RPi.GPIO for basic IO. We are using https://github.com/sarfata/pi-blaster to PWM servos like https://github.com/lawsonkeith/picar
 
 ####Files
 steering.py steer() takes a float between .1 and .2 (inclusive) and moves the steering servo to steer the vehicle from right (.1), left (.2) and center (.15)
